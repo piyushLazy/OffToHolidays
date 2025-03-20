@@ -12,7 +12,7 @@ import { FaSwimmer } from "react-icons/fa";
 import { MdOutlinePets } from "react-icons/md";
 import { FaWifi } from "react-icons/fa";
 
-const BASE_URL = "http://127.0.0.1:8000"; // Backend API URL
+const BASE_URL = "https://2b65-183-83-52-212.ngrok-free.app/"; // Backend API URL
 
 interface Hotel {
   id: number;

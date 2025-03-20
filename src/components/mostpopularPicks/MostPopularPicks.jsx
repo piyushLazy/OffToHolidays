@@ -9,8 +9,7 @@ import MostPopularPicksTop from "./MostPopularPicksTop";
 import ApiHeader from "../data/APIHeader/ApiHeader";
 import Lottie from "lottie-react";
 import LoadingAnimation from "../assets/LoadingAnimation.json";
-import { FaArrowRight } from "react-icons/fa";
-import { FaArrowLeft } from "react-icons/fa";
+
 
 import  "./MostPopularPicks.css";
 

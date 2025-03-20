@@ -36,7 +36,13 @@ function AppHotelPageMiddle() {
         if (typeOfStay) queryParams.append("type", typeOfStay);
 
         const url = `${api}/api/hotels/filter/?${queryParams.toString()}`;
-        const response = await fetch(url, { method: "GET" });
+        const response = await fetch(url, { method: "GET"
+          ,  headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+            "ngrok-skip-Browser-Warning": "true",
+          },
+         });
         const data = await response.json();
         setHotels(data.results);
       } catch (error) {

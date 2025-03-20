@@ -69,7 +69,12 @@ function AppPackagePageMiddle() {
     
         // Send the GET request with the query parameters
         const response = await fetch(url, {
-          method: "GET", // Ensure the method is GET, no body is sent
+          method: "GET", 
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+            "ngrok-skip-Browser-Warning": "true",
+          },// Ensure the method is GET, no body is sent
         });
     
         const data = await response.json();
