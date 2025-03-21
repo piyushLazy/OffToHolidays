@@ -11,7 +11,6 @@ import { LuSquareParking } from "react-icons/lu";
 import { FaSwimmer, FaWifi } from "react-icons/fa";
 import { MdOutlinePets } from "react-icons/md";
 import {useRouter} from "next/navigation"
-const BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL 
 
 interface Hotel {
   id: number;
