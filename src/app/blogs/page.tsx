@@ -123,6 +123,9 @@ export default function Blog() {
                     }}
                     height = {100}
                     width = {100}
+                  
+                    objectFit="cover"
+                    priority
                   />
                 </div>
               )}

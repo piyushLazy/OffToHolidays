@@ -21,7 +21,7 @@ export default function ImageSwiper() {
   };
 
   return (
-    <div className="flex items-center justify-center h-screen px-4">
+    <div className="flex items-center justify-center max-sm:my-12  md:my-24 px-4">
       <div className="relative flex justify-center items-center gap-x-1 max-sm:gap-x-2 sm:gap-x-4 w-full max-w-[1200px]">
         {slides.map((slide, index) => {
           const isActive = index === currentIndex;

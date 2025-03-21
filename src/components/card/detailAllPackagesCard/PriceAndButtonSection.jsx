@@ -1,13 +1,13 @@
 import React from 'react';
 import './PriceAndButtonSection.css';  // Importing the CSS file
 
-const PriceAndButtonSection = ({ price, onBookNow }) => {
+const PriceAndButtonSection = ({ price, handleBookNow }) => {
   return (
     <div className="priceAndButtonContainer">
       <div className="priceText">₹ {price} per person</div>
       <button 
         className="bookButton"
-        onClick={onBookNow}
+        onClick={handleBookNow}
       >
         Book Now
       </button>

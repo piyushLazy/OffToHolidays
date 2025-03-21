@@ -1,3 +1,3 @@
-const API_URL = "https://2b65-183-83-52-212.ngrok-free.app/";
+const API_URL = Process.env.NEXT_PUBLIC_API_BASE_URL
 
 export default API_URL;

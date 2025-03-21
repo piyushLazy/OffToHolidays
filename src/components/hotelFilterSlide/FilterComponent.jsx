@@ -1,7 +1,7 @@
 
 "use client";
 
-import { useState, useEffect } from "react";
+import {  useEffect } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css"; 
@@ -11,7 +11,6 @@ import { ChevronDown, Calendar } from "lucide-react";
 const HotelFilter = ({
   hotels,
   setFilteredHotels ,
-  
   destination,
   setDestination,
   hotelName,
@@ -102,7 +101,7 @@ setFilteredHotels(filtered);
   }, [destination, hotelName, rating, locatedIn, typeOfStay, priceRange, checkIn, checkOut]);
 
   return (
-    <div className="max-w-sm p-4 bg-white shadow rounded-lg">
+    <div className="max-w-[19rem] p-4 bg-gray-100 shadow-lg rounded-lg space-y-4 sm:block">
       <div className="flex justify-between items-center mb-4">
         <p className="text-2xl font-bold">Filter</p>
         <button onClick={handleReset} className="text-blue-500 text-sm">

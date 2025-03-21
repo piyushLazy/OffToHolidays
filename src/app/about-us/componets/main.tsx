@@ -46,7 +46,9 @@ const Main = () => {
           src={AboutUsMainimg}
           alt="Mountains"
           width={1200} 
-          height={600} 
+          height={600}  
+  objectFit="cover"
+  priority
           className="w-full h-96  object-cover"
         />
       </div>

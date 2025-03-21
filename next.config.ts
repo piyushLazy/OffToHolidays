@@ -1,7 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ["127.0.0.1", "images.unsplash.com", "plus.unsplash.com", "media.istockphoto.com"],
+    domains: [
+      "127.0.0.1",
+      "images.unsplash.com",
+      "plus.unsplash.com",
+      "media.istockphoto.com",
+      "blog.lazyatra.com",
+    ],
     remotePatterns: [
       {
         protocol: "http",
@@ -9,10 +15,13 @@ const nextConfig = {
         port: "8000",
         pathname: "/media/**",
       },
+      {
+        protocol: "https",
+        hostname: "blog.lazyatra.com",
+        pathname: "/wp-content/uploads/**",
+      },
     ],
   },
-
-
 };
 
 module.exports = nextConfig;

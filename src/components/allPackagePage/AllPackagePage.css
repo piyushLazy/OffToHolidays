@@ -10,8 +10,7 @@
 .allPackagesPageMiddle{
     padding-top: 60px;
     gap: 20px;
-    display: flex;
-    flex-direction: row;
+
 }
 .detailsTourPage-top-desktop{
     height: 200px;

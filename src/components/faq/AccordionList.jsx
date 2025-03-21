@@ -19,7 +19,7 @@ const AccordionList = () => {
   return (
     <div className="flex justify-center items-center  md:mt-14 px-4">
       <div className="w-full max-w-full  mx-auto p-6 bg-white ">
-        <div className="flex justify-between m-6"> 
+        <div className="flex max-sm:flex-col max-sm:items-center justify-between m-6"> 
         <div>
         <h5 className="text-xl font-bold text-center mb-4">
           Got Questions? We've Got Answers!

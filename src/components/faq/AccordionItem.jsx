@@ -7,7 +7,9 @@ const AccordionItem = ({ number, question, answer, isOpen, onToggle }) => {
       className={` mt-6   p-4  transition-all ${
         isOpen ? "bg-blue-50" : "bg-white"
       }`}
-      style={{ width: "70rem" }} // Set width to 60rem (960px)
+      style={{
+        width: window.innerWidth < 450 ? "22rem" : "70rem",
+      }} // Set width to 60rem (960px)
     >
       {/* Button to toggle accordion */}
       <button                                                                                                                                                                                                                                                                                                                                                                                                         

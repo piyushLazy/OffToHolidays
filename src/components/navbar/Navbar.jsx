@@ -7,7 +7,7 @@ import Drawer from "./Drawer";
 import "./Navbar.css";
 import logo from "@/assets/OffToHoloiday-Logo.png";
 import loginIcon from "../assets/avatar-user-36.svg";
-import questionIcon from "../assets/help.svg";
+import { BsQuestionCircle } from "react-icons/bs";
 
 
 function Navbar() {
@@ -26,7 +26,7 @@ function Navbar() {
       { id: 6, label: "Blogs" },
     ],
     right: {
-      questionIcon: questionIcon,
+   
       loginIcon: loginIcon,
     },
   };
@@ -39,7 +39,7 @@ function Navbar() {
   };
 
   return (
-    <nav className="navbar-main">
+    <nav className="navbar-main max-sm:bg-transparent   md:bg-zinc-100">
       <div className="navbar-left">
      {/* Left Section */}
   <Link href="/" className="navbar-left-logo">
@@ -56,7 +56,7 @@ function Navbar() {
       className="navbar-link  "
       onMouseOver={() => item.label === "Packages" && toggleDrawer()}
     >
-     <span className="hover:underline"> {item.label}</span>
+     <span className="hover:underline text-md font-bold md:text-gray-900 "> {item.label}</span>
     </Link>
   ))}
 </div>
@@ -92,17 +92,11 @@ function Navbar() {
 
 {/* Right Section */}
 <div className="navbar-right">
-  <Image
-    src={data.right.questionIcon}
-    alt="Question Icon"
-    className="navbar-right-questionIcon"
-    width={24}
-    height={24}
-  />
+<BsQuestionCircle className="text-black text-2xl md:mt-3" />
   <Link href = "/auth">
 
-  <div className="navbar-right-button">
-    <span className="navbar-right-text text-black">Login</span>
+  <div className="navbar-right-button  ">
+    <span className="navbar-right-text text-black  text-md font-bold">Login</span>
     
     <Image
       src={data.right.loginIcon}

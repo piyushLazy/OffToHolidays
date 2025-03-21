@@ -1,7 +1,7 @@
 .adventure-card {
   width: 183px;
   height: 311px;
-  padding:0 0 20px 0;
+  padding: 0 0 20px 0;
   position: relative;
   border-radius: 12px;
   overflow: hidden;
@@ -74,6 +74,7 @@
   height: 16px;
 }
 
+/* 🔹 Responsive Styles for Tablets and Mobile */
 @media (max-width: 768px) {
   .adventure-card {
     width: 50%;
@@ -82,18 +83,18 @@
     border-radius: 12px 12px 0 0;
     overflow: hidden;
   }
-  
+
   .adventure-card__image {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 211px;
+    height: 311px;
     border-radius: 12px;
     background-size: cover;
     background-position: center;
   }
-  
+
   .adventure-card__content {
     position: absolute;
     bottom: 0;
@@ -104,13 +105,13 @@
     padding: 16px;
     box-sizing: border-box;
   }
-  
+
   .adventure-card__info {
     display: flex;
     flex-direction: column;
     gap: 4px;
   }
-  
+
   .adventure-card__title {
     font-family: Inter, sans-serif;
     font-weight: 700;
@@ -119,7 +120,7 @@
     color: #111111;
     margin: 0;
   }
-  
+
   .adventure-card__price {
     font-family: Inter, sans-serif;
     font-weight: 400;
@@ -128,14 +129,14 @@
     color: #111111;
     margin: 0;
   }
-  
+
   .adventure-card__cta {
     display: flex;
     align-items: center;
     gap: 4px;
     margin-top: 4px;
   }
-  
+
   .adventure-card__cta-text {
     font-family: Inter, sans-serif;
     font-weight: 700;
@@ -143,11 +144,35 @@
     line-height: 19.6px;
     color: #3D99DB;
   }
-  
+
   .adventure-card__cta-icon {
     width: 16px;
     height: 16px;
   }
-  
 }
 
+/* 🔹 Extra Small Devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .adventure-card {
+    width: 90%; /* Fit smaller screens */
+    max-width: 280px;
+  }
+
+  .adventure-card__image {
+    height: 260px;
+    border-radius: 20px;
+  }
+
+  .adventure-card__content {
+    padding: 12px;
+  }
+
+  .adventure-card__title,
+  .adventure-card__price {
+    font-size: 12px;
+  }
+
+  .adventure-card__cta-text {
+    font-size: 12px;
+  }
+}

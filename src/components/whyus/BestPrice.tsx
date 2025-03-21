@@ -9,16 +9,16 @@ import Frame3 from "@/assets/Frame3.png";
 
 const RightSection = () => {
   return (
-    <div className="flex flex-row lg:flex-row md:items-center md:gap-6 p-2 h-full  ">
+    <div className="flex flex-row lg:flex-row items-center md:gap-6 p-2 h-full  ">
       
       {/* Left Side - Text & Cards */}
       <div className="flex md:items-center md:gap-12 max-sm:gap-4 w-full">
         
-        <div className="flex flex-col gap-12 w-full max-w-xl">
+        <div className="flex flex-col gap-12 w-full  max-w-xl">
           
           {/* Full Width Main Line */}
           <div className="w-full">
-            <p className="text-gray-800 md:text-md max-sm:text-sm font-serif md:pt-14 max-sm:pt-4 md:leading-relaxed md:text-center">
+            <p className="text-gray-800 md:text-md max-sm:ml-16 max-sm:text-sm font-serif md:pt-14 max-sm:pt-4 md:leading-relaxed md:text-center">
               Lazy Yatra builds packages in-house, helping us reduce costs and provide a better experience. 
               We deal directly with hotels & cab providers to minimize turnaround time and make trips hassle-free.
             </p>

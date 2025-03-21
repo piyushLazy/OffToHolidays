@@ -13,7 +13,6 @@ import { useSearchParams } from "next/navigation";
 function AppPackagePageMiddle() {
   // State to manage the filters
   const searchParams = useSearchParams();
-
   const [duration, setDuration] = useState(searchParams.get("nights") ||[1, 15]);
   const [priceRange, setPriceRange] = useState([0, 10000]);
   const [themes, setThemes] = useState([]);
@@ -85,8 +84,6 @@ function AppPackagePageMiddle() {
         setLoading(false); // Set loading to false once the data is fetched
       }
     };
-    
-
 
     // Debounce the API call
     if (debounceTimer) {
@@ -107,7 +104,7 @@ function AppPackagePageMiddle() {
   console.log("package"  ,packages);  // Safe access with optional chaining
 
   return (
-    <div className="allPackagesPageMiddle">
+    <div className="allPackagesPageMiddle md:flex md:flex-row lg:flex-row max-sm:flex-col sm:flex-col">
       <div className="filter-container">
         <FilterComponent
           destination={destination}

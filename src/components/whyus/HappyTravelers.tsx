@@ -31,8 +31,8 @@ const HappyTravelers = () => {
       </div>
       
       {/* Title */}
-      <div className="text-center mb-6">
-        <p className="text-gray-800 max-sm:text-md max-sm:px-4">
+      <div className="text-center  max-sm:m-18 mb-6">
+        <p className="text-gray-800 max-sm:text-md max-sm:mx-4">
           Lazy Yatra has served 10K+ customers, receiving 95% positive reviews. 
           73% of our clients trusted us for their next trips.
         </p>
@@ -56,7 +56,7 @@ const HappyTravelers = () => {
         >
           {images.map((img, index) => (
             <SwiperSlide key={index} className="flex justify-center">
-              <div className="relative md:w-54 max-sm:w-40 max-sm:h-32 md:h-36 overflow-hidden rounded-xl shadow-lg">
+              <div className="relative md:w-54 max-sm:w-72 max-sm:h-32 md:h-36 overflow-hidden rounded-xl shadow-lg">
                 <Image
                   src={img}
                   alt="Traveler"
@@ -87,7 +87,7 @@ const HappyTravelers = () => {
         >
           {images.filter((_, index) => index % 2 !== 0).map((img, index) => (
             <SwiperSlide key={index} className="flex justify-center">
-              <div className="relative md:w-54 max-sm:w-40 max-sm:h-32 md:h-36 overflow-hidden rounded-xl shadow-lg">
+              <div className="relative md:w-54 max-sm:w-72 max-sm:h-32 md:h-36 overflow-hidden rounded-xl shadow-lg">
                 <Image
                   src={img}
                   alt="Traveler"

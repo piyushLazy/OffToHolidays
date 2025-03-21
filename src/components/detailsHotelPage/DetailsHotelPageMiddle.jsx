@@ -66,7 +66,7 @@ const DetailTourPageMiddle = ({ hotelId }) => {
       <div className="detailsTourPage-mainbody">
         <div>
           <p className="detailsTourPage-title">
-            {hotel?.name ? `${hotel.name} - ${hotel.nights + 1} Days / ${hotel.nights} Nights` : "Loading..."}
+            {hotel?.name ? `${hotel.name}` : "Loading..."}
           </p>
         </div>
 

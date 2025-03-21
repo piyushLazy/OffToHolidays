@@ -1,2 +1,2 @@
-const api= "https://2b65-183-83-52-212.ngrok-free.app/"
+const api= process.env.NEXT_PUBLIC_API_BASE_URL
 export default api
