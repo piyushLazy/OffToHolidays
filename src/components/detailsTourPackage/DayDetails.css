@@ -1,0 +1,243 @@
+.day-details-list{
+  min-width: 750px;
+  padding: 20px 20px;
+  display: flex;
+  flex-direction: column;
+
+  gap: 20px;
+}
+
+.day-details {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    padding: 10px 10px 20px 0px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .day-header {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .day-circle {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #3d99db;
+  }
+  
+  .day-title {
+    padding: 0px 10px;
+    display: flex;
+    gap: 12px;
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+  }
+  
+  .day-highlights-section {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .day-highlights-title {
+
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 25.2px;
+  }
+  
+  .day-highlights-content {
+    /* padding: 0px 10px; */
+    font-family: Inter;
+    font-size: 16px;
+    line-height: 22.4px;
+    color: #111111;
+  }
+  
+  .overnight-stay-section {
+   
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .overnight-stay-content {
+    font-family: Inter;
+    font-size: 16px;
+    line-height: 22.4px;
+    color: #111111;
+  }
+  
+  .change-hotel-button {
+    padding: 6px 30px;
+    border-radius: 20px;
+    border: 1px solid #3d99db;
+    background-color: transparent;
+    color: #3d99db;
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 25.2px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .change-hotel-button:hover {
+    background-color: #3d99db;
+    color: #ffffff;
+  }
+  
+  .inclusions-section {
+    /* padding: 0px 10px; */
+    font-family: Inter;
+    font-size: 14px;
+    line-height: 19.6px;
+    color: #111111;
+  }
+  
+
+  @media (width <= 768px) {
+
+    .day-details-list {
+      width: 100vw;
+      padding: 20px 0px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      font-family: Inter;
+    }
+    
+    .day-details {
+      padding: 0px 10px;
+      width: 100vw;
+      display: flex;
+      flex-direction: column;
+      
+    }
+    
+    .day-header {
+      padding: 0px 0px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 12px;
+    }
+    
+    .day-circle {
+
+      width: 16px;
+      height: 16px;
+      background-color: #3d99db;
+      border-radius: 50%;
+    }
+    
+    .day-title {
+      width: 100%;
+      padding: 0px 0px;
+      display: flex;
+      flex-direction: row;
+      gap: 12px;
+      align-items: flex-start; /* Aligns text to the top */
+    }
+    
+    .day-title span:first-child {
+      white-space: nowrap; /* Ensures "Day X" stays in one line */
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 24px;
+      color: #111111;
+    }
+    
+    .day-title span:last-child {
+      flex: 1; /* Allows the title to take remaining space */
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 24px;
+      color: #111111;
+      overflow: hidden;
+      text-overflow: ellipsis; /* Optional: Truncates if too long */
+      word-break: break-word; /* Allows long words to wrap */
+      white-space: normal; /* Allows multiple lines for title */
+    }
+    
+    
+    
+    .day-highlights-section {
+      width: 100vw;
+      /* border: 1px solid black; */
+      display: flex;
+      flex-direction: column;
+
+      gap: 8px;
+    }
+    
+    .day-highlights-title {
+      padding: 0px 0px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      color: #111111;
+    }
+    
+    .day-highlights-content {
+      
+      /* padding: 0px 10px; */
+      /* width: 97vw; */
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      color: #111111;
+    }
+    
+    .overnight-stay-section {
+      padding: 0px 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      gap: 8px;
+    }
+    
+    .overnight-stay-content {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      color: #111111;
+    }
+    
+    .change-hotel-button {
+      padding: 6px 40px;
+      border: 1px solid #3d99db;
+      border-radius: 20px;
+      background: transparent;
+      color: #3d99db;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .change-hotel-button:hover {
+      background: #3d99db;
+      color: white;
+    }
+    
+    .inclusions-section {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 22px;
+      color: #111111;
+    }
+    
+    
+  }

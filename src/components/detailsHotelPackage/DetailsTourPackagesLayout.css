@@ -1,0 +1,65 @@
+.detailsTourlayout {
+    max-width: 1200px;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0px 20px;
+    gap: 20px;
+  }
+  .detailsTourlayout-topcontainer-desktop{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .detailsTourlayout-topcontainer-mobile{
+    display: none;
+  }
+ 
+
+  .detailsTournavigation-container {
+    padding: 10px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .detailsTourcontent-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  @media (width <= 768px) {
+
+    .detailsTourlayout {
+      width: 100vw;
+      padding: 0px 0px;
+      gap: 0px;
+    }
+    .detailsTournavigation-container {
+      /* padding: 10px 10px; */
+    }
+    .layout-topcontainer-desktop{
+      display: none;
+    }
+    .detailsTourlayout-topcontainer-desktop{
+      display: none;
+    }
+    .detailsTourlayout-topcontainer-mobile{
+      display: flex;
+      width: 100vw;
+      height: 300px;
+    }
+    .detailsTourcontent-container{
+      width: 100vw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+    }
+  }

@@ -1,0 +1,135 @@
+.similarpackages {
+  width: 1200px;
+}
+
+.similarpackages-container {
+  width: 1200px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.similarpackages-title {
+  width: 1200px;
+  font-family: Inter;
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 1.1;
+  color: var(--black);
+}
+
+.similarpackages-top {
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+  margin-bottom: 20px;
+}
+
+.similarpackages-footer {
+  width: 1200px;
+  /* background-color: green; */
+  display: flex;
+  justify-content: space-between;
+}
+
+.similarpackages-top-selection {
+  width: 100%;
+  overflow-x: scroll;
+}
+
+.similarpackages-top-selection::-webkit-scrollbar {
+  display: none;
+}
+
+.similarpackages-left-right-scroll {
+  /* width: 100%; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4px;
+}
+
+.similarpackages-swiper {
+  margin-top: 20px;
+  width: 1200px;
+  padding: 10px 0px;
+  height: fit-content;
+  overflow: hidden;
+}
+
+.similarpackages-swiper .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.similarpackages-swiper .swiper-button-next,
+.similarpackages-swiper .swiper-button-prev {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: rgb(211, 21, 21);
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.similarpackages-swiper .swiper-pagination {
+  bottom: 10px !important;
+}
+
+.similarpackages-bottom-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (width <= 768px) {
+  .similarpackages-top-section {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .similarpackages-bottom-section {
+    width: 100vw;
+  }
+
+  .similarpackages-top-selection {
+    width: 100vw;
+    overflow: hidden;
+    overflow-x: scroll;
+  }
+
+  .similarpackages-top {
+    max-height: 380px;
+  }
+
+  .similarpackages {
+    width: 100vw;
+    padding: 0 10px;
+  }
+
+  .similarpackages-title {
+    width: 100vw;
+    padding: 0 15px;
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.33;
+    text-align: left;
+    color: var(--black);
+  }
+
+  .similarpackages-swiper {
+    width: 100vw;
+    padding: 0 20px 20px 0px;
+    height: fit-content;
+  }
+
+  .similarpackages-footer {
+    width: 100vw;
+    display: flex;
+    padding: 10px 10px;
+  }
+}

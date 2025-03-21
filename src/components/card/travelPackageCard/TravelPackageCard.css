@@ -1,0 +1,195 @@
+.travel-package-card {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 895px;
+    height: auto;
+    gap: 20px;
+  }
+  
+  .image-container {
+    width: 285px;
+    height: 255px;
+    background-image: url('https://dashboard.codeparrot.ai/api/image/Z7WARTO_YEiK2154/rectangl.png');
+    background-size: cover;
+    border-radius: 8px;
+  }
+  
+  .content-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 12px;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 32px;
+  }
+  
+  .package-name {
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22.4px;
+    color: #000000;
+  }
+  
+  .duration {
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22.4px;
+    color: #007bff;
+  }
+  
+  .highlights h4,
+  .inclusions h4 {
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22.4px;
+    margin: 0;
+  }
+  
+  .highlights ul {
+    padding-left: 20px;
+    margin: 0;
+  }
+  
+  .inclusions .icons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .inclusions .icons img {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .price {
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22.4px;
+    color: #000000;
+  }
+  
+  .book-now {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+
+  @media (width <=768px) {
+
+    .travel-package-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 398px;
+  height: auto;
+  gap: 20px;
+}
+
+.image-container {
+  width: 100%;
+  height: 255px;
+  background-image: url('https://dashboard.codeparrot.ai/api/image/Z7WARTO_YEiK2154/rectangl.png');
+  background-size: cover;
+  border-radius: 8px;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 12px;
+  padding: 10px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 32px;
+}
+
+.package-name {
+  font-family: 'Inter';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22.4px;
+  color: #000000;
+}
+
+.duration {
+  font-family: 'Inter';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22.4px;
+  color: #007bff;
+}
+
+.highlights {
+  font-family: 'Inter';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000000;
+}
+
+.inclusions h4 {
+  font-family: 'Inter';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22.4px;
+  margin: 0;
+}
+
+.inclusions .icons {
+  display: flex;
+  gap: 10px;
+}
+
+.inclusions .icons img {
+  width: 24px;
+  height: 24px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price {
+  font-family: 'Inter';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22.4px;
+  color: #000000;
+}
+
+.book-now {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+  }

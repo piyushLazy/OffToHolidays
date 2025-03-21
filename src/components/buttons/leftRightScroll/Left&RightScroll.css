@@ -1,0 +1,35 @@
+/* Common styles for both left and right scroll icons */
+.icon {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  flex-grow: 0;
+  /* transition: transform 0.2s ease-in-out, opacity 0.3s ease; */
+  cursor: pointer;
+}
+
+/* Left scroll icon */
+.navigate-left {
+  margin-right: 6px;
+  transform: rotate(0deg);
+  opacity: 0.6; /* Slightly higher opacity for better visibility */
+}
+
+/* Right scroll icon */
+.navigate-right {
+  margin-left: 6px;
+  opacity: 0.6;
+  transform: rotate(-180deg);
+}
+
+/* Hover effect for better interactivity */
+.icon:hover {
+  opacity: 1;
+}
+
+@media (max-width: 750px) {
+  .icon {
+    width: 32px;
+    height: 32px;
+  }
+}

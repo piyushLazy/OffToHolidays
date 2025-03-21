@@ -1,0 +1,62 @@
+.Destinations-container{
+    width: 1200px;
+  
+    display: flex;
+    
+    flex-direction: column;
+
+}
+.text-center h1{
+    font-family: Inter;
+  font-size: 32px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.1;
+  letter-spacing: normal;
+  text-align: left;
+  color: var(--black);
+}
+.Destinations-allplaces{
+    width: 100%;
+    overflow-x: hidden;
+    height: 46px;
+    /* overflow: hidden; */
+}
+.Destinations-cards{
+    
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
+@media (width <= 768px) {
+    .Destinations-container{
+        width: 100vw;
+    }
+    .text-center{
+        padding: 0px 10px;
+    }
+    .text-center h1{
+        font-size: 18px;
+        font-weight: 600;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.33;
+        letter-spacing: normal;
+        text-align: left;
+        color: var(--black);
+    }
+    .Destinations-allplaces{
+        width: 100vw;
+        overflow: hidden;
+        overflow-x: scroll;
+    }
+    .Destinations-cards{
+        width: 100%;
+    }
+
+}

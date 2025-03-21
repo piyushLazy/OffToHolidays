@@ -1,0 +1,48 @@
+.cardContainer {
+    display: flex;
+    flex-direction: row;
+    width: 850px;
+    height: auto;
+    gap: 10px;
+    /* background-color: #000; */
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .imageSection {
+    flex-grow: 0;
+    width: 40%;
+    max-width: 285px;
+    height: 255px;
+  }
+  
+  .detailsSection {
+    width: 60%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-evenly; */
+    gap: 6px;
+    height: auto;
+    padding: 0px 20px;
+    color: #fff;
+  }
+  
+  @media (max-width: 768px) {
+    .cardContainer {
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+    }
+  
+    .imageSection {
+      width: 100%;
+      height: auto;
+    }
+  
+    .detailsSection {
+      gap: 6px;
+      padding: 10px;
+    }
+  }
+  

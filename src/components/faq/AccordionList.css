@@ -1,0 +1,21 @@
+.accordion-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    width: 1200;
+    margin: 0 auto;
+    gap: 12px;
+  }
+
+
+@media (width <=768px){
+  .accordion-list {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    /* max-width: 429px; */
+    margin: 0 auto;
+    gap: 12px;
+  }
+
+}

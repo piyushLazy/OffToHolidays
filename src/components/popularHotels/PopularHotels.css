@@ -1,0 +1,193 @@
+.Most-Popular-Hotels {
+  width: 1200px;
+  padding: 30px 0;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.Our-Most-Popular-Hotels {
+
+  font-family: Inter;
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 1.1;
+  color: var(--black);
+ 
+}
+
+.Most-Popular-Hotels-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px ;
+}
+
+
+
+
+.Most-Popular-Hotels-footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 5px;
+}
+
+.Left-Right-Scroll {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 4px;
+}
+
+.Left-Right-Scroll button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.Left-Right-Scroll button:hover {
+  background-color: #555;
+}
+
+.PlaceSelection{
+  width: 1200px;
+  overflow: hidden;
+  overflow-x: scroll;
+  scrollbar-width: none; 
+}
+
+.hotelsSwiper {
+
+  width: 1200px;
+  padding: 10px 0;
+  /* height: 490px; */
+  overflow: hidden;
+}
+
+.hotelsSwiper .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.hotelsSwiper .swiper-pagination {
+  bottom: 10px !important;
+}
+
+.hotelsSwiper .swiper-button-next,
+.hotelsSwiper .swiper-button-prev {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.hotelsSwiper .swiper-button-next:hover,
+.hotelsSwiper .swiper-button-prev:hover {
+  background-color: #000;
+}
+
+
+.card-actions {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* .card {
+  padding-bottom: 10px;
+} */
+
+.BottomSection {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  border-radius: 10px;
+}
+
+
+.ToggleSwitch {
+  display: flex;
+  align-items: center;
+}
+
+
+/* Show pagination dots, hide the surrounding pagination component */
+.hotelsSwiper .swiper-pagination {
+  visibility: hidden; 
+}
+
+.hotelsSwiper .swiper-pagination-bullet {
+  /* visibility: hidden; */
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+}
+
+
+
+/* Hide the rest of the pagination component (arrows, etc.) */
+.hotelsSwiper .swiper-button-next,
+.hotelsSwiper .swiper-button-prev {
+  visibility: hidden; 
+}
+
+@media (width <= 750px) {
+  .BottomSection{
+    width: 100vw;
+  }
+  .PlaceSelection{
+    max-width: 100vw;
+    overflow: hidden;
+    overflow-x: scroll;
+  }
+  .Most-Popular-Hotels {
+    width: 100%;
+  }
+  .Most-Popular-Hotels-top{
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    
+  }
+  .Our-Most-Popular-Hotels {
+    width: 100%;
+    font-size: 18px;
+  }
+
+  
+  .hotelsSwiper {
+    width: 100vw;
+    height: 100%;
+    padding: 10px 10px 10px 5px;
+    overflow: hidden;
+  }
+  .Most-Popular-Hotels-footer {
+    padding: 10px 0.5rem;
+  }
+  
+
+  
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  scrollbar-width: none;
+}

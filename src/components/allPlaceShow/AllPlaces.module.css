@@ -1,0 +1,56 @@
+.placesContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  font-family: Inter;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: solid 1px #e4e4e4;
+  overflow-y: hidden;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
+.placesContainer::-webkit-scrollbar-track {
+  display: none;
+}
+
+.tabButton {
+  flex: 0 0 auto;
+  cursor: pointer;
+}
+
+.tabButton.active {
+  color: var(--primary-blue);
+}
+
+/* Responsive Design */
+@media (width <= 768px) {
+  .placesContainer {
+    width: 100vw;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .tabButton {
+    flex-shrink: 0;
+    width: auto;
+    font-size: 14px;
+    padding: 0 1rem;
+  }
+}
+
+
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  scrollbar-width: none;
+}
+
+
+

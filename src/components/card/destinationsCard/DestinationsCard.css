@@ -1,0 +1,132 @@
+.destination-grid {
+  width: 1200px;
+  display: flex;
+  padding: 20px 0;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.destination-row {
+  display: flex;
+  flex-wrap:wrap;
+
+  gap: 20px;
+  height: 270px;
+}
+.first-row{
+  gap: 20px;
+  display:flex;  
+}
+
+.destination-card {
+  position: relative;
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.destination-card.small {
+  width: 318px;
+}
+
+.destination-card.medium {
+   width:379px;
+}
+
+.destination-card.large {
+   width: 463px;
+}
+
+.destination-card.xlarge {
+  width: 578px;
+}
+
+.destination-label {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.destination-label span {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 26.4px;
+  color: #ffffff;
+}
+
+.destination-label img {
+  width: 20px;
+  height: 20px;
+  margin-top: 3.5px;
+}
+
+@media (width <= 768px) {
+  .destination-grid {
+    width: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  
+  .destination-row {
+    width:100vw;
+    padding:0 10px;
+    display: flex;
+    flex-wrap: wrap;
+    height: fit-content;
+    gap: 10px;
+  }
+  .first-row{
+    width:100vw;
+  }
+  
+  .destination-card {
+    position: relative;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    height: 190px;
+  }
+  
+  .destination-card.medium {
+    width: 60%;
+  }
+  .destination-card.small {
+    min-width: 40%;
+  }
+  
+  .destination-card.large {
+    min-width: 100%;
+  }
+  
+  .destination-label {
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  
+  .destination-label span {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 26.4px;
+    color: #ffffff;
+  }
+  
+  .destination-label img {
+    width: 20px;
+    height: 20px;
+    margin-top: 3.5px;
+  }
+  
+}

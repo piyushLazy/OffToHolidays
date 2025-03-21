@@ -1,0 +1,113 @@
+.filter-component {
+    width: 100%;
+    max-width: 300px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .place-checkboxes{
+    display: flex;
+    flex-direction: column;;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .duration-inputs{
+    display: flex;
+    gap: 50%;
+  }
+  .checkbox-label{
+    gap: 10px;
+  }
+  .checkbox-input{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .filter-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .filter-section-1st-heading{
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #343a40;
+    cursor: pointer;
+  }
+  
+  .filter-header span {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .filter-header button {
+    background: none;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+  }
+  .filter-section-1st{
+    margin-bottom: 20px;
+    height: 200px;
+    overflow: hidden;
+    /* overflow-y: scroll; */
+    /* scrollbar-width: thin; */
+    
+  }
+  .search-input{
+    margin-bottom: 15px;
+  }
+  
+  .filter-section {
+    margin-bottom: 10px;
+    /* max-height: 180px; */
+    /* overflow: hidden; */
+    /* overflow-y: scroll; */
+    /* scrollbar-width: thin; */
+    
+  }
+  
+  .filter-section h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .filter-section input[type="text"] {
+    width: 100%;
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    margin-bottom: 10px;
+  }
+  .search-input{
+    padding: 8px 15px;
+    border-radius: 20px;
+    padding-bottom: 5px;
+  }
+  .filter-section input[type="range"] {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .filter-section .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .filter-section .tags button {
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 20px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  

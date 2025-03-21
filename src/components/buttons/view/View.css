@@ -1,0 +1,44 @@
+.view-container {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  padding: 4px 8px; /* Adds some spacing */
+  border-radius: 12px; /* Rounded corners for better design */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.view-container:hover {
+  background-color: rgba(0, 123, 255, 0.1); /* Light blue on hover */
+}
+
+.view {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  color: var(--primary-blue); /* Matches primary blue */
+}
+
+.down {
+  width: 16px;
+  height: 16px;
+  transform: rotate(-90deg); /* Rotates the arrow icon */
+}
+@media (width <= 750px) {
+  .view-container {
+
+  }
+  .view{
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    color: var(--primary-blue); /* Matches primary blue */
+  }
+  .down{
+    idth: 8px;
+    height: 8px;
+    transform: rotate(-90deg); /* Rotates the arrow icon */
+  }
+}

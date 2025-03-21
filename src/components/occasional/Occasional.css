@@ -1,0 +1,138 @@
+.occasional-container {
+  width: 1200px;;
+  border-radius: 20px;
+  padding: 10px;
+  box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.12);
+  background-color: var(--primary-blue-10);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.occasional-container-middle {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.occasional-container-left {
+  flex: 1;
+  padding: 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+}
+.occasional-container-left-bottom{
+  padding: 0.2rem 0.2rem;
+}
+
+.occasional-container-right {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+.occasional-container-right-footer {
+  position: absolute;
+  bottom: 500px;
+  left:   10px;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+/* Main container of the swiper and buttons */
+.occasionalSwiper  .swiper-container-wrapper {
+  position: relative;
+}
+
+/* Swiper container to show 4 images */
+.occasionalSwiper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+
+.occasionalSwiper{
+  height: fit-content;
+}
+
+
+ .swiper-arrow-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+
+.swiper-arrow-container button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: #000;
+  transition: all 0.3s ease;
+}
+
+.swiper-arrow-container button:hover {
+  transform: scale(1.2);
+}
+
+.occasionalSwiper {
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.occasionalSwiper {
+  /* margin-top: 20px; */
+  
+  /* height: 490px; */
+  /* overflow: hidden; */
+}
+.occasionalSwiper .swiper-pagination {
+  visibility: hidden; 
+}
+
+@media (width <= 750px) {
+  .occasional-container-left {
+    gap: 5px;
+    padding: 0 0.5rem ;
+  }
+ 
+  .occasional-container {
+    width: 100vw;
+    flex-direction: column;
+    /* height: 100vh; */
+  }
+  .occasional-container-middle {
+    flex-direction: column;
+  }
+  .occasional-container-left-title{
+    text-align: left;
+    padding: 0;
+  }
+  .occasional-container-left-description{
+    text-align: left;
+  }
+
+    /* height: 307px; */
+  .occasionalSwiper{
+    margin-top: -45px;
+    height: 380px;
+  }
+
+ 
+}

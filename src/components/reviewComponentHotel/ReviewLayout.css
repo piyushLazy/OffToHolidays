@@ -1,0 +1,94 @@
+.review-layout {
+  width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.review-summary-container {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  padding: 0 20px;
+  margin-bottom: 12px;
+}
+
+.testimonials-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.testimonial-container-mobile {
+  display: none;
+}
+
+.hotelsSwiper {
+
+  width:100vw;
+  padding: 10px 0;
+  /* height: 490px; */
+  overflow: hidden;
+}
+
+.hotelsSwiper .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.hotelsSwiper .swiper-pagination {
+  bottom: 10px !important;
+}
+
+.hotelsSwiper .swiper-button-next,
+.hotelsSwiper .swiper-button-prev {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.hotelsSwiper .swiper-button-next:hover,
+.hotelsSwiper .swiper-button-prev:hover {
+  background-color: #000;
+}
+
+.hotelsSwiper .swiper-pagination {
+  visibility: hidden; 
+}
+
+.hotelsSwiper .swiper-pagination-bullet {
+  /* visibility: hidden; */
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+}
+
+
+
+/* Hide the rest of the pagination component (arrows, etc.) */
+.hotelsSwiper .swiper-button-next,
+.hotelsSwiper .swiper-button-prev {
+  visibility: hidden; 
+}
+@media (max-width: 767px) {
+  .review-layout {
+    width: 100vw;
+  }
+  .testimonials-container {
+    display: none;
+  }
+
+  .testimonial-container-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+  

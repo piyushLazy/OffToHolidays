@@ -1,0 +1,53 @@
+.home-page{
+    width: 100%;
+    /* width: 1200px; */
+    height: 100%;
+     overflow: hidden;
+    
+}
+.homePage-body-backgroundslider{
+    height:100vh;
+}
+
+.forAddingMargin{
+    margin-top: 100px;
+}
+.homePage-container{
+    width: 100%;
+    /* min-width: 1200px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.homePage-header{
+    width: 100%;
+    height: 100%;
+    z-index: 200;
+}
+
+
+.homePage-body{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    scroll-behavior: smooth;
+}
+
+@media (width <= 768px) {
+    .home-page{
+        width: 100vw;
+    }
+    .homePage-header{
+        width: 100vw;
+        height: 100vh;
+        touch-action: pan-y; 
+        overflow-x: hidden;
+      
+    }
+}

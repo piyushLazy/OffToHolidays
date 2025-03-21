@@ -1,0 +1,58 @@
+.packageDetailsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 590px;
+    height: 32px;
+    gap: 20px;
+    padding: 0 0px;
+    box-sizing: border-box;
+  }
+  
+  .textContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .title {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 25.2px;
+    color: #111111;
+  }
+  
+  .duration {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22.4px;
+    color: #3D99DB;
+  }
+  
+  .downloadButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 8px;
+    border: 1px solid #FFFFFF;
+    border-radius: 8px;
+    background: transparent;
+    cursor: pointer;
+  }
+  
+  .downloadIcon {
+    width: 24px;
+    height: 24px;
+  }
+  
+  @media (max-width: 768px) {
+    .packageDetailsContainer {
+      min-width: 100%;
+    }
+  }
+  

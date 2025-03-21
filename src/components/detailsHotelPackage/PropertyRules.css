@@ -1,0 +1,35 @@
+.property-rules {
+    font-family: Inter;
+    color: #333;
+    padding: 10px;
+    border-radius: 4px;
+    width: 100%;
+    min-width: 750px;
+  }
+  
+  .property-rules h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .property-rules ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  
+  .property-rules li {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+
+  @media (width <=768px) {
+    .property-rules {
+      width: 100vw;
+      padding: 10px 10px;
+      min-width: 450px;
+    }
+    
+  }
+
+  

@@ -1,0 +1,141 @@
+.detailsTourPage-page{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+   scrollbar-width: none;
+   font-family: Inter;
+
+}
+.detailsTourPage-body{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    scroll-behavior: smooth;
+    gap: 20px;
+  
+}
+.detailsTourPage-mainbody{
+    padding: 20px 0px;
+}
+
+.detailsTourPage-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.detailsTourPage-header{
+    width: 100%;
+
+}
+
+.detailsTourPage-top-desktop{
+    height: 200px;
+    width: 100vw;
+    display: flex;
+
+}
+.shadow{
+  
+    width: 100vw;
+    position: absolute;
+    top: 180px;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(17.6px);
+    -webkit-backdrop-filter: blur(17.6px);
+    box-shadow:50px 50px 50px 0px var(--grays-gray-5);
+}
+.packagefilterbar{
+    position: absolute;
+    top: 120px;
+    z-index: 20;
+}
+.overlay{
+    display: none;
+}
+.detailsTourPage-body-content{
+    
+
+
+}
+.detailsTourPage-top-mobile{
+    display: none;
+}
+.detailsTourPage-title{
+    width: 100%;
+    padding: 10px 10px;
+    display: flex;
+    justify-content: flex-start;
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.1;
+    letter-spacing: normal;
+    text-align: left;
+    color: var(--black);
+}
+
+.detailsTourPage-body-faq{
+    width: 1200px;
+}
+
+
+@media (width <= 768px) {
+    .detailsTourPage-page{
+        width: 100vw;
+     
+    }
+    .detailsTourPage-mainbody{
+        padding: 0px 0px;
+        width: 100vw;
+
+    }
+    .detailsTourPage-body-faq{
+        width: 100vw;
+       
+    }
+         
+         
+    .detailsTourPage-title{
+        width: 100vw;
+        font-size: 18px;
+
+    }
+    .detailsTourPage-body{
+        width: 100vw;
+    }
+    .detailsTourPage-header{
+        width: 100vw;
+        touch-action: pan-y; 
+        overflow-x: hidden;    
+    }
+    .detailsTourPage-top-mobile{
+        width: 100vw;
+        height: 200px;
+    }
+    .packagefilterbar{
+
+        display: none;
+    }
+    .layout-header{
+        display: none;
+    }
+    .detailsTourPage-top-desktop{
+        display: none;
+    }
+    .packagefilterbar{
+        display: none;
+    }
+    .detailsTourPage-title{
+        display: none;
+    }
+}

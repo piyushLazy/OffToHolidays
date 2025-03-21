@@ -1,0 +1,177 @@
+.Most-Popular-Picks {
+  width: 1200px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
+}
+
+.Most-Popular-Picks-title {
+  width: 1200px;
+  font-family: Inter;
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 1.1;
+  color: var(--black);
+  
+}
+
+.Most-Popular-Picks-top{
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+  margin-bottom: 20px;
+}
+
+.Most-Popular-Picks-footer {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+}
+.TopSection-PlaceSelection{
+  width: 100%; 
+  overflow-x: scroll;
+ }
+  
+.TopSection-PlaceSelection::-webkit-scrollbar {
+    display: none; 
+  }
+
+.Left-Right-Scroll {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 4px;
+}
+
+
+.PopularPicksSwiper {
+  margin-top: 20px;
+  width: 1200px;
+  padding: 10px 0px;
+  height: fit-content;
+  overflow: hidden;
+}
+
+.PopularPicksSwiper .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.card-actions {
+  width: 100%;
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+
+
+.PopularPicksSwiper .swiper-button-next,
+.swiper-button-prev {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: rgb(211, 21, 21);
+  padding: 10px;
+  border-radius: 50%;
+}
+
+  .PopularPicksSwiper .swiper-pagination {
+    bottom: 10px !important;
+  }
+
+
+  .BottomSection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .scroll-button {
+  
+    color: white;
+    border: none;
+    /* color:navajowhite; */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+
+
+
+
+
+ @media (width <= 768px) {
+
+  .TopSection{
+    width: 100vw;
+      display: flex;
+      flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  } 
+  .BottomSection{
+    width: 100vw;
+  }
+  .TopSection-PlaceSelection{
+    width: 100vw;
+    overflow: hidden;
+    overflow-x: scroll;
+  }
+  .Most-Popular-Picks-top{
+    max-height: 380px;
+  }
+
+  .Most-Popular-Picks{
+
+    width: 100vw;
+    padding: 0 10px;
+   
+  
+
+    
+ 
+  }
+  .Most-Popular-Picks-title{
+   
+    width: 100vw;
+    padding: 0 15px;
+    flex-grow: 0;
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: normal;
+    text-align: left;
+    color: var(--black);
+   
+  }
+
+
+ 
+  .PopularPicksSwiper {
+   
+    
+    width: 100vw;
+    padding: 0 5px 20px 10px;
+    height: fit-content;
+  }
+  .MobileViewContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  .Most-Popular-Picks-footer {
+    width: 100vw;
+    display: flex;
+    padding: 10px 10px;
+
+  }
+}

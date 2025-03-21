@@ -1,0 +1,112 @@
+/* Container Styles */
+.navigationtabs-container {
+  max-height: 600px;
+  min-height: 200px;
+  max-width: 100%; /* Prevents extra width */
+  width: 100%; /* Makes it responsive */
+  scrollbar-width: thin;
+  scrollbar-color: #3498db #f1f1f1; /* Scrollbar thumb and track colors (for Firefox) */
+  overflow-x: hidden; 
+
+}
+
+/* Webkit Scrollbar Styles */
+.navigationtabs-container::-webkit-scrollbar {
+  width: 1px; /* Scrollbar width */
+}
+
+.navigationtabs-container::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Track color */
+}
+
+.navigationtabs-container::-webkit-scrollbar-thumb {
+  background: var(--primary-blue); /* Thumb color */
+  border-radius: 4px;
+}
+
+.navigationtabs-container::-webkit-scrollbar-thumb:hover {
+  background: #2980b9; /* Thumb hover color */
+}
+
+/* Tabs Wrapper */
+.navigation-tabs-wrapper {
+  overflow-x: auto;
+  white-space: nowrap;
+  width: 100%;
+}
+
+/* Navigation Tabs */
+.navigation-tabs {
+  width: 100%;
+  position: sticky;
+  top: 0; 
+  display: flex;
+  background-color: var(--white);
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  border-bottom: 2px solid #ccc;
+  min-width: 100%;
+  gap: 10px;
+  overflow-x: auto;
+  z-index: 1000;
+  padding: 0px;
+}
+
+/* Individual Tab Styles */
+.tab {
+  display: inline-block;
+  padding: 20px 15px;
+  cursor: pointer;
+  font-family: Inter;
+  font-size: 16px;
+  color: #555;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s;
+  flex-shrink: 0;
+}
+.tab-content{
+  width: 100%;
+}
+
+.tab.active {
+  color: #3d99db;
+  border-bottom: 2px solid #3d99db;
+}
+
+/* Scrollbar Styling for Tabs Wrapper */
+.navigation-tabs-wrapper::-webkit-scrollbar {
+  height: 5px;
+}
+
+.navigation-tabs-wrapper::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .navigationtabs-container {
+    width: 100vw;
+    height: auto;
+    overflow-x: hidden;
+  }
+
+  .navigation-tabs-wrapper {
+    width: 100vw;
+  }
+  
+  .tab {
+    font-size: 14px;
+    padding: 15px 10px;
+  }
+  
+  .tab-content {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    overflow-x: hidden;
+  }
+}
+

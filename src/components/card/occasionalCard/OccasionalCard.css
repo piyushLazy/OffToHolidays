@@ -1,0 +1,153 @@
+.adventure-card {
+  width: 183px;
+  height: 311px;
+  padding:0 0 20px 0;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.adventure-card__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 211px;
+  background-size: cover;
+  background-position: center;
+}
+
+.adventure-card__content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: #fff;
+  padding: 2px 16px;
+}
+
+.adventure-card__info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.adventure-card__title {
+  font-family: Inter, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  text-align: left;
+  line-height: 19.6px;
+  color: #111111;
+  margin: 0;
+}
+
+.adventure-card__price {
+  font-family: Inter, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  text-align: left;
+  line-height: 19.6px;
+  color: #111111;
+  margin: 0;
+  margin-top: 4px;
+}
+
+.adventure-card__cta {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 4px;
+}
+
+.adventure-card__cta-text {
+  font-family: Inter, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 19.6px;
+  color: #3D99DB;
+}
+
+.adventure-card__cta-icon {
+  width: 16px;
+  height: 16px;
+}
+
+@media (max-width: 768px) {
+  .adventure-card {
+    width: 50%;
+    height: 311px;
+    position: relative;
+    border-radius: 12px 12px 0 0;
+    overflow: hidden;
+  }
+  
+  .adventure-card__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 211px;
+    border-radius: 12px;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .adventure-card__content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: #fff;
+    padding: 16px;
+    box-sizing: border-box;
+  }
+  
+  .adventure-card__info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  .adventure-card__title {
+    font-family: Inter, sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 19.6px;
+    color: #111111;
+    margin: 0;
+  }
+  
+  .adventure-card__price {
+    font-family: Inter, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19.6px;
+    color: #111111;
+    margin: 0;
+  }
+  
+  .adventure-card__cta {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: 4px;
+  }
+  
+  .adventure-card__cta-text {
+    font-family: Inter, sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 19.6px;
+    color: #3D99DB;
+  }
+  
+  .adventure-card__cta-icon {
+    width: 16px;
+    height: 16px;
+  }
+  
+}
+
