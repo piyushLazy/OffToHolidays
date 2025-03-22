@@ -90,9 +90,9 @@ const PopularHotels = () => {
   };
 
   return (
-    <div className="Most-Popular-Hotels">
+    <div className="Most-Popular-Hotels ">
       <div className="Most-Popular-Hotels-top">
-        <div className={`Our-Most-Popular-Hotels ${isMobile ? "MobileHeadingH7" : "DesktopHeadingH4"}`}>
+        <div className={`Our-Most-Popular-Hotels max-sm:p-2 text-black max-sm:font-bold ${isMobile ? "MobileHeadingH7" : "DesktopHeadingH4"}`}>
           Popular Hotels To Check Out
         </div>
         <ToggleSwitch onToggle={handleToggle} />

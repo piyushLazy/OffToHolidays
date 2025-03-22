@@ -30,7 +30,7 @@ const Destinations = () => {
   ];
 
   return (
-    <div className="Destinations-container">
+    <div className="Destinations-container max-sm:my-14">
       <div className="text-center">
         <h1 className="title">Must-Visit Destinations for Your Next Adventure</h1>
       </div>

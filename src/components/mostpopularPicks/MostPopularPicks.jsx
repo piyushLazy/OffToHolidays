@@ -125,7 +125,7 @@ export default function MostPopularPicks() {
 
   return (
     <div className="mostPopularPicks">
-      <p className="title">Our Most Popular Picks</p>
+      <p className="title  p-3">Our Most Popular Picks</p>
 
       {/* ✅ Top Section Always Loads First */}
       <div className="topSection">

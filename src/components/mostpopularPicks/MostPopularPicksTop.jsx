@@ -18,8 +18,7 @@ import "./MostPopularPicks.css";
 
 // Dynamic Import for Lottie (fixes Next.js SSR issue)
 const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
-import LoadingAnimation from "../assets/LoadingAnimation.json";
-
+import Spinner from "../Spinner";
 function MostPopularPicksTop({
   selectedPlace,
   setSelectedPlace,
@@ -38,7 +37,6 @@ function MostPopularPicksTop({
   useEffect(() => {
     if (typeof window !== "undefined") {
       setIsMobile(window.innerWidth <= 750);
-      
       const handleResize = () => setIsMobile(window.innerWidth <= 750);
       window.addEventListener("resize", handleResize);
       return () => window.removeEventListener("resize", handleResize);
@@ -56,15 +54,15 @@ function MostPopularPicksTop({
   );
 
   return (
-    <div className="TopSection">
+    <div className="TopSection ">
       {/* Top Section - Place Selection */}
-      <div className="TopSection-PlaceSelection">
+      <div className="TopSection-PlaceSelection ">
         <AllPlaces selectedPlace={selectedPlace} onPlaceSelect={setSelectedPlace} places={mostpopularplacedata} />
       </div>
 
-      {loading && (
-        <Lottie animationData={LoadingAnimation} loop={true} style={{ width: 200, height: 200 }} />
-      )}
+      {loading && <div className="mt-6">
+<Spinner />
+ </div>}
 
       <Swiper
         ref={swiperRef}
@@ -82,7 +80,7 @@ function MostPopularPicksTop({
         ))}
       </Swiper>
 
-      <div className="Most-Popular-Picks-footer">
+      <div className="Most-Popular-Picks-footer max-sm:m-4">
         <ViewAll />
         <div className="flex gap-8 ">
           <LeftScroll onClick={() => swiperRef.current?.swiper?.slidePrev()} />

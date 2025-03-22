@@ -1,6 +1,5 @@
 "use client";
-
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import "./Drawer.css";
@@ -9,132 +8,91 @@ import down from "../assets/down (1).svg";
 import arrowleft from "../assets/arrow-left.svg";
 
 function Drawer() {
-  const data = {
-    mid: [
-      { id: "packages", label: "Packages", hasSubmenu: true },
-      { id: "hotels", label: "Hotels" },
-      { id: "about-us", label: "About Us" },
-      { id: "testimonials", label: "Testimonial" },
-      { id: "contact-us", label: "Contact Us" },
-      { id: "blogs", label: "Blogs" },
-    ],
-  };
-
-  const submenuItems = {
-    mid: [
-      { id: "all-packages", label: "All Packages", hasSubmenu: false },
-      {
-        id: "international-packages",
-        label: "International Packages",
-        hasSubmenu: true,
-        subItems: ["Bali", "Singapore", "Dubai", "Vietnam", "Thailand"],
-      },
-      {
-        id: "domestic-packages",
-        label: "Domestic Packages",
-        hasSubmenu: true,
-        subItems: [
-          "Andaman",
-          "Himachal",
-          "Rajasthan",
-          "Gujarat",
-          "Goa",
-          "Assam",
-          "Himachal Pradesh",
-          "Tamil Nadu",
-        ],
-      },
-    ],
-  };
-
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [isSubmenuOpen, setIsSubmenuOpen] = useState(false);
+  const drawerRef = useRef(null); // Ref for drawer
 
   const toggleDrawer = () => {
     setIsDrawerOpen(!isDrawerOpen);
-    setIsSubmenuOpen(false); // Close submenu if main drawer is toggled
+    setIsSubmenuOpen(false); // Close submenu when drawer toggles
   };
 
   const toggleSubmenu = () => {
     setIsSubmenuOpen(!isSubmenuOpen);
   };
 
+  // 🔴 Close Drawer When Clicking Outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (drawerRef.current && !drawerRef.current.contains(event.target)) {
+        setIsDrawerOpen(false);
+        setIsSubmenuOpen(false);
+      }
+    };
+
+    if (isDrawerOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isDrawerOpen]);
+
   return (
     <div className="mobile-navbar">
+      {/* Toggle Drawer Button */}
       <button className="drawer-toggle" onClick={toggleDrawer}>
         {isDrawerOpen ? "" : "☰"}
       </button>
 
       {/* Main Drawer */}
-      <div className={`drawer ${isDrawerOpen ? "open" : ""}`}>
+      <div ref={drawerRef} className={`drawer ${isDrawerOpen ? "open" : ""}`}>
         <button className="drawer-close" onClick={toggleDrawer}>
           <Image src={arrowleft} alt="Close" width={24} height={24} />
         </button>
 
         <div className="drawer-content">
-          {data.mid.map((item) => (
+          {["Packages", "Hotels", "About Us", "Testimonials", "Contact Us", "Blogs"].map((label, index) => (
             <Link
-              key={item.id}
-              href={`/${item.id}`}
+              key={index}
+              href={`/${label.toLowerCase().replace(/\s+/g, "-")}`}
               className="drawer-link"
               onClick={(e) => {
-                if (item.hasSubmenu) {
-                  e.preventDefault(); // Prevent navigation for submenu items
+                if (label === "Packages") {
+                  e.preventDefault(); // Prevent navigation for submenu
                   toggleSubmenu();
                 }
               }}
             >
-              {item.label}
-              {item.hasSubmenu ? <Image src={down} alt="submenu" width={16} height={16} /> : ""}
+              {label}
+              {label === "Packages" ? <Image src={down} alt="submenu" width={16} height={16} /> : ""}
             </Link>
           ))}
         </div>
-        <div className="login-button">
-          <LoginButton />
-        </div>
+
+        <Link href={`/auth`}>
+          <div className="login-button">
+            <LoginButton />
+          </div>
+        </Link>
       </div>
 
       {/* Submenu Drawer */}
-      <div className={`submenu-drawer ${isSubmenuOpen ? "open" : ""}`}>
-        <button className="drawer-close" onClick={toggleSubmenu}>
-          <Image src={arrowleft} alt="Back" width={24} height={24} />
-        </button>
-        <div className="drawer-content">
-          {submenuItems.mid.map((item) => (
-            <div key={item.id} className="drawer-link-container">
-              <Link
-                href={`/${data.mid[0].id}/${item.id}`}
-                className="drawer-link"
-                onClick={(e) => {
-                  if (item.hasSubmenu) {
-                    e.preventDefault(); // Prevent navigation for items with submenus
-                  }
-                }}
-              >
-                {item.label}
-                {item.hasSubmenu && (
-                  <Image src={down} alt="submenu" className="submenu-icon" width={16} height={16} />
-                )}
+      {isSubmenuOpen && (
+        <div className="submenu-drawer">
+          <button className="drawer-close" onClick={toggleSubmenu}>
+            <Image src={arrowleft} alt="Back" width={24} height={24} />
+          </button>
+          <div className="drawer-content">
+            {["All Packages", "International Packages", "Domestic Packages"].map((item, index) => (
+              <Link key={index} href={`/packages/${item.toLowerCase().replace(/\s+/g, "-")}`} className="drawer-link">
+                {item}
               </Link>
-              {item.hasSubmenu && (
-                <div className="submenu-content">
-                  {item.subItems.map((subItem, index) => (
-                    <Link
-                      key={index}
-                      href={`/${data.mid[0].id}/${item.id}/${subItem
-                        .toLowerCase()
-                        .replace(/\s+/g, "-")}`}
-                      className="submenu-item"
-                    >
-                      {subItem}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }

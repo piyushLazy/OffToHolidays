@@ -1,34 +1,45 @@
-/* LoginButton.module.css */
+/* Login Button */
 .button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 8px 80px;
-    border-radius: 20px;
-    border: 1px solid #3d99db;
-    background-color: transparent;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-  }
-  
-  .button:hover {
-    background-color: rgba(61, 153, 219, 0.1);
-  }
-  
-  .button:active {
-    background-color: rgba(61, 153, 219, 0.2);
-  }
-  
-  .button:disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
-  }
-  
-  .text {
-    color: #3d99db;
-    font-family: 'Inter', sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-    margin: 0;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 40px; /* Reduced padding */
+  width: 100%; /* Make it responsive inside the drawer */
+  max-width: 250px; /* Prevent it from getting too large */
+  border-radius: 20px;
+  border: 1px solid #3d99db;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.button:hover {
+  background-color: rgba(61, 153, 219, 0.1);
+}
+
+.button:active {
+  background-color: rgba(61, 153, 219, 0.2);
+}
+
+.button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Adjust the button inside the drawer */
+.drawer .button {
+  width: 80%; /* Button takes up 80% of the drawer width */
+  max-width: 200px; /* Prevent it from being too large */
+  padding: 10px 30px; /* Adjusted padding */
+  font-size: 14px; /* Slightly smaller text */
+}
+
+/* Text Style */
+.text {
+  color: #3d99db;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 0;
+}

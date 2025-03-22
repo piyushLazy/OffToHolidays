@@ -8,7 +8,7 @@ function AllPlaces({ selectedPlace, onPlaceSelect, places }) {
         <span
           key={`${place}-${index}`} // ✅ Ensures uniqueness
           onClick={() => onPlaceSelect(place)}
-          className={`${styles.tabButton} h-auto ${selectedPlace === place ? styles.active : ""}`}
+          className={`${styles.tabButton} h-auto ma-sm:text-3xl font-bold ${selectedPlace === place ? styles.active : ""}`}
         >
           {place}
         </span>
@@ -16,5 +16,4 @@ function AllPlaces({ selectedPlace, onPlaceSelect, places }) {
     </div>
   );
 }
-
 export default AllPlaces;

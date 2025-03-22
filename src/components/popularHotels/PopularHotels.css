@@ -1,10 +1,13 @@
 .Most-Popular-Hotels {
+  width: 80vw;
   width: 1200px;
-  padding: 30px 0;
-  background-color: #fff;
-  border-radius: 10px;
+  padding: 5px 0;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+   margin-top: 20px;
 }
-
 .Our-Most-Popular-Hotels {
 
   font-family: Inter;
